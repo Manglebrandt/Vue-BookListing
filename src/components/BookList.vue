@@ -9,6 +9,7 @@
 
 
 <script>
+  import BookItem from './components/BookItem';
   export default {
     name: 'BookList',
     data() {
@@ -22,7 +23,7 @@
           ]
       }
     },
-    components: Object(BookItem)
+    components: BookItem
   };
   
 </script>
