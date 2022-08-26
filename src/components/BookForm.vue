@@ -16,13 +16,10 @@
         bookAuthor: ''
       }
     },
-    methods{
-    bookSubmit(bookTitle, bookAuthor);
-    addBook{
-      this.$emit('addBook', bookTitle, bookAuthor);
-    }
-  }
-  }
+    methods(
+      bookSubmit, (bookTitle, bookAuthor);
+  addBook(){ this.$emit('addBook', bookTitle, bookAuthor); }
+  
 </script>
 
 <style></style>
