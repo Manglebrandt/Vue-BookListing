@@ -2,7 +2,7 @@
   <form class="" action="#" method="post">
     <input type="text" name="title" value="" placeholder="Book Title" v-model="bookTitle">
     <input type="text" name="author" value="" placeholder="Book Author" v-model="bookAuthor">
-    <button type="submit" name="button" onsubmit="bookSubmit(bookTitle, bookAuthor)">Add Book</button>
+    <button type="submit" name="button" v-on="bookSubmit(bookTitle, bookAuthor)">Add Book</button>
   </form>
 </template>
 
@@ -12,8 +12,8 @@
     props: ['books'],
     data() {
       return {
-        bookTitle = '',
-        bookAuthor = ''
+        bookTitle: '',
+        bookAuthor: ''
       }
     },
     methods{
