@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{title}}</h1>
-    <book-form></book-form>
+    <book-form @appendBook='appendBook'></book-form>
     <ul>
       <book-item v-for="book in books" :book="book"></book-item>
     </ul>
@@ -17,6 +17,11 @@
     components: {
       BookItem,
       BookForm
+    },
+    methods: {
+      appendBook(bookTitle, bookAuthor) {
+        this.books.push({title: bookTitle, author: bookAuthor})
+      }
     },
     data() {
       return {
