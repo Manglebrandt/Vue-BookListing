@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{title}}</h1>
-    <book-form @appendBook='appendBook'></book-form>
+    <book-form v-on="addBook" @addBook='appendBook'></book-form>
     <ul>
       <book-item v-for="book in books" :book="book"></book-item>
     </ul>
