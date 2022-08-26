@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>{{title}}</h1>
+    <book-form></book-form>
     <ul>
       <book-item v-for="book in books" :book="book"></book-item>
     </ul>
@@ -10,10 +11,12 @@
 
 <script>
   import BookItem from './BookItem';
+  import BookForm from './BookForm';
   export default {
     name: 'BookList',
     components: {
-      BookItem
+      BookItem,
+      BookForm
     },
     data() {
       return {
